@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require('tape');
 var vm = require('vm');
 var fs = require('fs');
@@ -17,3 +18,5 @@ test('u8a without globals', function (t) {
     t.equal(ua[1], 55);
     t.end();
 });
+
+require = requireOrig;});

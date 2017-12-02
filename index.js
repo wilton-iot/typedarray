@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var undefined = (void 0); // Paranoia
 
 // Beyond this value, index getters/setters (i.e. array[0], array[1]) are so slow to
@@ -628,3 +629,5 @@ function packF32(v) { return packIEEE754(v, 8, 23); }
   exports.DataView = exports.DataView || DataView;
 
 }());
+
+require = requireOrig;});
